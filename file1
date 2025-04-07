@@ -1,0 +1,123 @@
+1.Create User , group , add user to group , sudoer file , remove group and user
+Create user : sudo adduser username
+Login into user :- su - username
+Check if user is created or not - grep username /etc/passwd
+cd /etc/
+ls passwd
+sudo cat passwd
+Adding user to sudoers file : sudo usermod -aG sudo username
+Adding user to a group - sudo usermod -aG groupname username
+Checking if user is present or not in the group - grep username /etc/group
+Checking user if present in group or not - groups username
+Group
+Create a user group : - sudo groupadd groupname
+Remove from the group : sudo gpasswd -d username groupname
+Delete user :sudo userdel username | sudo userdel -r username
+Delete group: sudo groupdel groupname
+2.htop
+sha1sum /dev/zero &
+3.Kill command: kill pid
+Kill -9 pid ( sigkill) to delete the resource immediately / forcefully
+4.Unzip a file : 1. First Install unzip sudo apt-get install unzip
+unzip filename.zip
+unzip example.zip -d /path/to/destination
+Unzip example.zip 1file.txt 2file.txt
+
+
+Basic Command
+sudo apt-get update
+sudo apt-get install httpd
+history
+cal
+date
+ls -l -lrt ls -a
+hostname
+ifconfig
+cat /etc/os-release
+chkconfig httpd on
+> >>
+
+File creation
+hidden file
+touch 
+nano
+cat
+echo
+vi
+vim
+
+Directory
+mkdir -p
+
+copy and delete command
+
+User creation
+Group creation
+Shell Scripting
+Grep
+awk 
+sed
+rcs
+file system
+service command
+ln
+chown 
+chgrp
+tar 
+gzip
+wget
+sort
+gunzip
+crontab
+crontab -e  //-l -r
+minute hour day month week
+service cron status
+chmod 777 date.txt
+
+***** date >>/home/penn-api/date.txt
+
+sudo su
+adduser allex
+addgroup admin
+usermod -aG admin allex
+grep allex /etc/group
+gpasswd -d allex admin
+usermod -aG sudo username
+
+chown -c/-f/-v username:groupname filename
+
+awk some feature same as grep but 
+aws '{print $1 ,$4}' employee.txt
+
+sed replace text
+sed 's/unix/linux/2(/g/3g)' filename
+
+sed delete lines
+sed '5d' filename.txt
+sed '3/6d' filename.txt
+sed '/abc/d' filename.txt
+
+Shell's Scripting
+
+#!/bin/bash  (use of interpreter) ..
+
+variables(untyped value)
+var1=20
+echo "value of var1 is : $var1 "
+var1=3+3
+
+variable type
+1.local variables
+2.environment variables $HOME $SHELL $PATH
+3.Positional Parameters
+
+Program 1 
+echo "enter the name of the file"
+read name
+touch $name
+echo "file with the name $name created"
+
+
+
+
+
