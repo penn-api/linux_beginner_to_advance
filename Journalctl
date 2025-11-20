@@ -1,0 +1,7 @@
+This is used to monitor the logs.
+Command
+
+journalctl -f #-f follow
+journalctl -u apache2 #units
+journalctl -f -u apache2/sshd #real time monitor
+journalctl _UID=1000 #id -u kali
